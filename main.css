@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  --mainColor: #009688;
+  --secondaryColor: #004d40;
+  --lightGray: #f3f3f3;
+}
+
+body {
+  font-family: "Poppins", Tahoma, Arial, sans-serif;
+  background-color: var(--lightGray);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.parent {
+  width: 600px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.parent input {
+  border: 2px solid var(--mainColor);
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.parent input:focus {
+  outline: none;
+  border-color: var(--secondaryColor);
+  box-shadow: 0 0 8px var(--mainColor);
+}
+
+.parent .buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.parent .buttons span {
+  background: var(--mainColor);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.parent .buttons span:hover {
+  background: var(--secondaryColor);
+}
+
+.parent .results {
+  background: var(--lightGray);
+  padding: 25px;
+  margin-top: 20px;
+  border: 2px dashed var(--mainColor);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.parent .results span {
+  font-weight: bold;
+  color: var(--mainColor);
+}
+
+.parent .results .keys {
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
